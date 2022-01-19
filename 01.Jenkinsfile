@@ -1,5 +1,7 @@
 pipeline () {
-    agent any
+    agent {
+        label 'JAVA_AGENT'
+    }
     stages {
         stage ('download Jenkinsfile from git') {
             steps {
